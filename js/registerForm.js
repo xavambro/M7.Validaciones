@@ -1,5 +1,5 @@
 
-function validarRegister(e){
+function validarRegister(){
     
 
     let errors =0;
@@ -73,9 +73,9 @@ function hasMayus(myString){
 //Pasamos los valores introducidos en el formulario al modal y lo mostramos
 function registerModal(){
         
-        email.innerHTML = inputEmail.innerHTML;
-        city.innerHTML = inputCity.innerHTML;
-        zip.innerHTML = inputZip.innerHTML;
+        email.innerHTML = inputEmail.value;
+        city.innerHTML = inputCity.value;
+        zip.innerHTML = inputZip.value;
 
         $("#register").modal('show');
        
