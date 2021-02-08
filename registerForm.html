@@ -1,0 +1,132 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+	<!-- Required meta tags -->
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<!--Font-Awesome-->
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+	<!-- Bootstrap CSS -->
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+		integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+	<link rel="stylesheet" href="css/form.css">
+	<title>Validacion de formularios</title>
+</head>
+
+<body>
+	<div class="container">
+
+		<h1>Validacion de formularios</h1>
+		<hr>
+
+		<br>
+		<h3>Validacion formulario de registro</h3>
+		<form id="registerForm" action="" onsubmit="return validarRegister()" name="registerForm">
+			<div class="form-row">
+				<div class="form-group col-md-6">
+					<label for="inputEmail">Email: </label>
+					<input type="text" name="inputEmail" class="form-control" id="inputEmail">
+					<div class="invalid-feedback" id="errorEmail"></div>
+				</div>
+			</div>
+			<div class="form-row">
+
+
+				<div class="form-group col-md-6">
+					<label for="inputPassword">Contrasenya: </label>
+					<input type="password" name="inputPassword" class="form-control" id="inputPassword">
+					<div class="invalid-feedback" id="errorPassword"></div>
+				</div>
+				<div class="form-group col-md-6">
+					<label for="inputPassword1">Contrasenya: </label>
+					<input type="password" name="inputPassword1" class="form-control" id="inputPassword1">
+					<div class="invalid-feedback" id="errorPassword1"></div>
+				</div>
+			</div>
+			<div class="form-row">
+				<div class="form-group col-md-6">
+					<label for="inputProvince">Provincia</label>
+					<select id="inputProvince" class="form-control">
+						<option selected value=""></option>
+						<option>Barcelona</option>
+						<option>Girona</option>
+						<option>Tarragona</option>
+						<option>Lleida</option>
+					</select>
+					<div class="invalid-feedback" id="errorProvince"></div>
+				</div>
+
+			</div>
+			<div class="form-row">
+				<div class="form-group col-md-6">
+					<label for="inputCity">Ciutat</label>
+					<input type="text" class="form-control" id="inputCity">
+					<div class="invalid-feedback" id="errorCity"></div>
+				</div>
+			</div>
+			<div class="form-row">
+
+				<div class="form-group col-md-2">
+					<label for="inputZip">Codi Postal</label>
+					<input type="text" class="form-control" id="inputZip">
+					<div class="invalid-feedback" id="errorZip"></div>
+				</div>
+			</div>
+			<div class="form-group">
+				<div class="form-check">
+					<input class="form-check-input" type="checkbox" id="gridCheck">
+					<label class="form-check-label" for="gridCheck">
+						He llegit i acepto la politica de privacitat
+					</label>
+					<div class="invalid-feedback" id="errorCheck"></div>
+				</div>
+			</div>
+			<button type="submit" class="btn btn-primary">Registre</button>
+		</form>
+
+		<div class="modal fade" id="register" role="dialog">
+			<div class="modal-dialog">
+
+				<!-- Modal content de registro-->
+				<div class="modal-content">
+					<div class="modal-header">
+						<h4 class="modal-title">Registro de usuario</h4>
+						<button type="button" class="close" data-dismiss="modal">&times;</button>
+
+					</div>
+					<div class="modal-body">
+						<p id="email"></p>
+						<p id="city"></p>
+						<p id="zip"></p>
+					</div>
+					<div class="modal-footer">
+						<button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+					</div>
+				</div>
+
+			</div>
+		</div>
+
+	</div>
+
+
+
+
+
+	<!-- Optional JavaScript -->
+	<!-- jQuery first, then Popper.js, then Bootstrap JS -->
+	<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+		integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+		crossorigin="anonymous"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
+		integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+		crossorigin="anonymous"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
+		integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+		crossorigin="anonymous"></script>
+	<script src="js/registerForm.js"></script>
+</body>
+
+</html>
